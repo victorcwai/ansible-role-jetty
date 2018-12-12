@@ -10,7 +10,7 @@
     dest={{ jetty_src_dir }}
 
 - name: Unpack distribution
-  shell: "tar zxf {{ jetty_src_dir }}/jetty-distribution-{{ jetty_version }}.tar.gz && chown -R {{ jetty_user_login }}:{{ jetty_group_name}} jetty-distribution-{{ jetty_version }}"
+  shell: "tar zxf {{ jetty_src_dir }}/jetty-distribution-{{ jetty_version }}.tar.gz"
   args:
     chdir: "{{ jetty_dst_dir }}"
     creates: "{{ jetty_dst_dir}}/jetty-distribution-{{ jetty_version }}"
